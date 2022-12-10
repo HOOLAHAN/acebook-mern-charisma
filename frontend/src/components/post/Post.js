@@ -55,6 +55,7 @@ const Post = ({ post, callback }) => {
         callback(true);
       }
     }
+    setComment("");
   };
 
   const handleCommentChange = (event) => {
