@@ -6,6 +6,7 @@ CSS Variables
   --secondary: #778290;
   --text-black: black;
   --text-dark-blue: #2a425e;
+  --accent-1: #bd0045;
   --off-white: #d9d9d9;
   --white: #ffffff;
   --border-radius: 25px;
@@ -17,6 +18,10 @@ CSS Resets
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 1.125rem;
 }
 
 a,
@@ -51,6 +56,7 @@ body {
   width: 60vw;
   align-items: center;
   margin: 0 auto;
+  background-color: var(--secondary);
 }
 
 code {
@@ -107,6 +113,7 @@ Posts
   border-radius: var(--border-radius);
   min-height: 10vh;
   margin-bottom: 22px;
+  background-color: var(--white);
 }
 
 .post-header {
@@ -180,7 +187,7 @@ Posts
   font-size: 0.9em;
   display: contents;
   border: none;
-  color: var(--primary);
+  color: var(--accent-1);
 }
 
 .img_likes {
@@ -233,6 +240,23 @@ Add Post Form
 }
 
 /************************
+Comments
+************************/
+.comment-input,
+.comment-submit {
+  padding: 5px;
+}
+
+.comment-input {
+  width: 70%;
+}
+
+.comment-timestamp {
+  color: var(--secondary);
+  font-size: 0.6rem;
+}
+
+/************************
 Signup & Login Form
 ************************/
 .container {
@@ -253,6 +277,12 @@ Signup & Login Form
 .login-form label,
 .sign-up-form label {
   margin: 5px 0;
+}
+
+.login-form input,
+.sign-up-form input {
+  font-size: 1.125rem;
+  padding: 5px;
 }
 
 .login-form-submit,
